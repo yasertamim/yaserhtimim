@@ -1,0 +1,8 @@
+    .wrap{
+          flex-wrap: wrap;
+    }
+
+    .my-2{
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }

@@ -1,0 +1,20 @@
+# OS-specific files
+.DS_Store        # macOS
+Thumbs.db        # Windows
+
+# Log files
+*.log
+
+# Backup files
+*~
+*.bak
+*.tmp
+
+# IDE/editor folders and files
+.vscode/
+.idea/
+*.swp
+
+# Optional: Git ignore for deploy-related folders
+dist/
+build/

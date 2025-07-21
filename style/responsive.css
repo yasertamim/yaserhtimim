@@ -1,0 +1,25 @@
+@media (max-width: 768px) {
+    .flex-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+   .card{
+    width: 95%;
+    padding: 10px;
+   }
+
+   .features{
+    max-width: 95%;
+   }
+
+    .features.highlight {
+    transform: scale(1.02); /* smaller scale */
+    box-shadow: 0 0 4px #00d1b2;
+  }
+  
+    .card:hover{
+        transform: scale(1.01);
+  
+    }
+
+}
