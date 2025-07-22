@@ -9,7 +9,7 @@
    }
 
    .features{
-    max-width: 95%;
+    max-width: 100%;
    }
 
     .features.highlight {
@@ -17,9 +17,16 @@
     box-shadow: 0 0 4px #00d1b2;
   }
   
-    .card:hover{
-        transform: scale(1.01);
+    .card{
+         transition: background-color 0.3s ease;
   
+    }
+      .card.active {
+         transition: transform 0.5s, box-shadow 0.5s;
+         box-shadow: 0 0 15px #00d1b2;
+        z-index: 1;
+      background-color: #333;
+      color: #efefef;
     }
 
 }
