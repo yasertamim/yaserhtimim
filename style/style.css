@@ -116,15 +116,6 @@
       
     }
 
-    .card:hover{
-          transition: transform 0.5s, box-shadow 0.5s;
-        transform: scale(1.1);
-        box-shadow: 0 0 15px #00d1b2;
-        z-index: 1;
-      background-color: #333;
-      color: #efefef;
-    }
-
     .text-box{
       border-radius: 10px;
       color: #333333;

@@ -35,3 +35,4 @@
       observer.observe(card);
     });
   });
+
