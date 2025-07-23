@@ -25,6 +25,9 @@
     font-weight: 600;
   }
 
+  footer a{
+    color: #efefef;
+  }
 .logo img {
   max-width: 120px;
   height: auto;
