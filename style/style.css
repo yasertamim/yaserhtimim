@@ -129,6 +129,11 @@
       padding: 1rem;
       box-shadow: 0 0 15px #333333;
     }
+
+
+    .pris{
+      margin-top: auto;
+    }
 ul {
   list-style: none;
   padding-left: 0; /* optional: remove left indent */
