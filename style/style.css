@@ -28,6 +28,9 @@
   footer a{
     color: #efefef;
   }
+
+
+
 .logo img {
   max-width: 120px;
   height: auto;
@@ -116,6 +119,7 @@
       background-color: #efefef;
       width: 30%;
       padding: 1rem;
+      color: #333;
       
     }
 
