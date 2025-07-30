@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learn Coding - Home</title>
+  <link rel="stylesheet" href="style/games.css">
+  
+</head>
+<body>
+    <div class="main-container">
+<!-- Inside your .main-container -->
+        <div class="blocks">
+        <div class="forward block" draggable="true" data-cmd="forward">&#8594;</div>
+        <div class="up block" draggable="true" data-cmd="up">&#8593;</div>
+        <div class="down block" draggable="true" data-cmd="down">&#8595;</div>
+        <div class="left block" draggable="true" data-cmd="left">&#8592;</div>
+
+        </div>
+
+        <div class="terminal" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <!-- Commands will appear here -->
+        </div>
+
+
+
+        <div class="play-ground" id="playground">
+      <!--         <img src="media/games/rabbit.png" class="rabbit" id="rabbit"> -->
+
+     
+        </div>
+
+        <button onclick="runCommands()">Run</button>
+        <button onclick="resetGame()">Reset</button>
+
+
+   
+       
+
+    </div>
+
+
+
+  <script src="script/games.js"></script>
+</body>
+</html>

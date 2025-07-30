@@ -1,0 +1,152 @@
+
+.main-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+    gap: 2rem;
+}
+
+/* 
+.play-ground{
+    position: relative;
+    height: 600px;
+    background-image: url("/media/games/landskape.jpg");
+    background-size: cover;       
+    background-position: center;  
+     background-repeat: no-repeat;
+}
+
+
+.rabbit{
+     position: absolute;
+  bottom: 5%;
+    left: 10%; 
+    
+  transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+}
+
+*/
+.rabbit {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.play-ground {
+  display: grid;
+  grid-template-columns: repeat(10, 60px); /* 10x10 maze */
+  grid-template-rows: repeat(10, 60px);
+  gap: 2px;
+  background: #333;
+  width: fit-content;
+  margin: auto;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wall {
+  background-color: #555;
+}
+
+.start {
+  background-color: lightgreen;
+}
+
+.goal {
+  background-color: gold;
+}
+
+
+button{
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+
+.rock{
+    position: absolute;
+    bottom: 5%;
+    left: 32%; /* optional: center horizontally */
+    
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+
+}
+
+.blocks{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+.block{
+    width: 50px;
+    height: 20px;
+    padding: 1rem;
+    border-radius: 15%;
+    text-align: center;
+    font-size: 20px;
+}
+.forward{
+    background-color: brown;
+}
+.up{
+    background-color: bisque;
+}
+
+
+
+.terminal {
+  min-height: 100px;
+  padding: 1rem;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+ 
+}
+
+.terminal .block {
+  background-color: #ccc;
+  cursor: default;
+}
+
+.down {
+  background-color: lightgreen;
+}
+
+.left {
+  background-color: lightblue;
+}
+
+
+
+
+@keyframes vibrate {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+.vibrate {
+  animation: vibrate 0.3s linear;
+}
