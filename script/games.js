@@ -8,7 +8,10 @@ document.querySelectorAll('.block').forEach(block => {
   block.addEventListener('dragstart', e => {
     e.dataTransfer.setData('text/plain', block.getAttribute('data-cmd'));
   });
+
+  setupMobileDrag(block); // 👈 Add this for mobile
 });
+
 
 function allowDrop(e) {
   e.preventDefault();
@@ -203,6 +206,65 @@ terminal.addEventListener('dragend', e => {
     }
   }
 });
+
+let draggingElement = null;
+let ghostElement = null;
+
+function setupMobileDrag(block) {
+  block.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+
+    draggingElement = block;
+    ghostElement = block.cloneNode(true);
+    ghostElement.style.position = 'absolute';
+    ghostElement.style.pointerEvents = 'none';
+    ghostElement.style.opacity = '0.7';
+    ghostElement.style.zIndex = '1000';
+    document.body.appendChild(ghostElement);
+
+    moveGhost(touch.pageX, touch.pageY);
+  });
+
+  block.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    moveGhost(touch.pageX, touch.pageY);
+  });
+
+  block.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    if (!ghostElement) return;
+
+    const terminalRect = terminal.getBoundingClientRect();
+    const ghostCenterX = ghostElement.offsetLeft + ghostElement.offsetWidth / 2;
+    const ghostCenterY = ghostElement.offsetTop + ghostElement.offsetHeight / 2;
+
+    // Check if dropped over terminal
+    if (
+      ghostCenterX >= terminalRect.left &&
+      ghostCenterX <= terminalRect.right &&
+      ghostCenterY >= terminalRect.top &&
+      ghostCenterY <= terminalRect.bottom
+    ) {
+      const cmd = draggingElement.getAttribute('data-cmd');
+      const dropEvent = new Event('drop');
+      dropEvent.dataTransfer = { getData: () => cmd };
+      drop(dropEvent); // Call your existing drop logic
+    }
+
+    document.body.removeChild(ghostElement);
+    ghostElement = null;
+    draggingElement = null;
+  });
+}
+
+function moveGhost(x, y) {
+  ghostElement.style.left = x - 25 + 'px';
+  ghostElement.style.top = y - 25 + 'px';
+}
+
+
 
 // Initial render
 renderMaze();
