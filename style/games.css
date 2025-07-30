@@ -150,3 +150,20 @@ button{
 .vibrate {
   animation: vibrate 0.3s linear;
 }
+
+@media (max-width: 768px) {
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .terminal{
+        flex-direction: row;
+    }
+
+    .blocks{
+        flex-direction: row;
+    }
+
+ 
+}
