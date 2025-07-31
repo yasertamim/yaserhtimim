@@ -135,8 +135,72 @@ button{
   background-color: lightblue;
 }
 
+@media (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .terminal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  button {
+    width: 40%;
+    align-self: center;
+  }
+    .play-ground {
+    grid-template-columns: repeat(10, 35px);
+    grid-template-rows: repeat(10, 35px);
+  }
+  .cell {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #444;
+  overflow: hidden;
+}
 
 
+.rabbit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none; /* Prevent dragging the image accidentally */
+  z-index: 1;
+}
+
+
+
+
+}
+
+@media (max-width: 480px) {
+  .play-ground {
+    grid-template-columns: repeat(10, 28px);
+    grid-template-rows: repeat(10, 28px);
+  }
+  
+  .rabbit {
+      width: 28px;
+      height: 28px;
+      
+}
+}
 
 @keyframes vibrate {
   0% { transform: translate(0); }
@@ -151,19 +215,3 @@ button{
   animation: vibrate 0.3s linear;
 }
 
-@media (max-width: 768px) {
-    .main-container{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .terminal{
-        flex-direction: row;
-    }
-
-    .blocks{
-        flex-direction: row;
-    }
-
- 
-}
