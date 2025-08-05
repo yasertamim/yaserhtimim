@@ -30,6 +30,8 @@
 }
 
 */
+
+
 .rabbit {
   width: 40px;
   height: 40px;
@@ -199,11 +201,7 @@ button{
     grid-template-rows: repeat(10, 28px);
   }
   
-  .rabbit {
-      width: 28px;
-      height: 28px;
-      
-}
+
 }
 
 @keyframes vibrate {

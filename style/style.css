@@ -144,3 +144,51 @@ ul {
   list-style: none;
   padding-left: 0; /* optional: remove left indent */
 }
+
+.ref-container{
+    display: flex;
+  gap: 10px; /* Optional: spacing between items */
+  justify-content: space-between; /* Optional: center items horizontally */
+  align-items: center; /* Optional: center items vertically */
+}
+
+.ref {
+  display: block;
+  width: 50%; /* Set desired width */
+  height: auto; /* Set desired height */
+  overflow: hidden;
+  position: relative;
+}
+
+.ref img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* or 'contain' depending on your desired effect */
+  display: block;
+}
+
+.ref:hover{
+    transition: transform 0.5s, box-shadow 0.5s;
+    transform: scale(1.01);
+
+    z-index: 1;
+}
+
+.ref-text{
+
+ position: absolute;
+  top: 80%;
+  left: 7%;
+  padding: 10px;
+opacity: 80%;
+  color: #333;
+  background-color: white;
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+ 
+}
+.ref-text p{
+   font-size: 16px;
+}

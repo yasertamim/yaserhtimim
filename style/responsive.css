@@ -29,6 +29,15 @@
       color: #efefef;
     }
 
+    .ref-container{
+      flex-direction: column;
+    }
+
+    .ref{
+      width: 100%;
+      height: auto;
+    }
+
  
 }
 
