@@ -10,6 +10,7 @@
       line-height: 1.6;
       background-color: white;
       color: #333;
+ 
        /* 
       background-image: url("/media/bg.jpeg");
       background-size: cover;       
@@ -30,9 +31,13 @@
     color:#333333 ;
     font-weight: 600;
   }
+  h1{
+    font-size: 3.5rem;
+  }
 
   footer a{
     color: #efefef;
+
   }
 
 
@@ -44,9 +49,10 @@
   margin: 0 auto 1rem auto; /* sentrer logoen og legg til avstand under */
 }
     header, footer {
- 
+     text-align: center;
+
       padding: 2rem 1rem;
-      text-align: center;
+     
     }
 
     footer{
@@ -54,7 +60,8 @@
       color: #efefef;
     }
     .container {
-      max-width: 1000px;
+      width: 90%;
+     /* max-width: 1000px;*/
       margin: auto;
       padding: 2rem 1rem;
     }
@@ -109,10 +116,13 @@
     }
 
     .flex-container{
+
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 2rem;
+      /*
       max-width: 1000px;
+      */
       
     }
 
@@ -131,9 +141,10 @@
 
     .text-box{
       border-radius: 10px;
-      color: #333333;
+      color: #fff;
       padding: 1rem;
-      box-shadow: 0 0 15px #333333;
+      background-color: #333;
+      /* box-shadow: 0 0 15px #333333; */
     }
 
 
