@@ -71,13 +71,13 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
-
+/*
 .features.highlight {
   transform: scale(1.1);
   box-shadow: 0 0 15px #00d1b2;
   z-index: 1;
 }
-
+*/
 
     .btn {
       display: inline-block;
