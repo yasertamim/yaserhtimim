@@ -1,162 +1,163 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>yt solutions</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YT Solutions – Rimelige nettsider</title>
+
+  <!-- Meta for sharing -->
   <meta property="og:title" content="YT Solutions – Nettsider for små bedrifter i Arendal" />
-<meta property="og:description" content="Mobilvennlig, rask og enkel nettside. Skreddersydd for deg." />
-<meta property="og:image" content="https://ytsolutions.no/media/logo.png" />
+  <meta property="og:description" content="Mobilvennlig, rask og enkel nettside. Skreddersydd for deg." />
+  <meta property="og:image" content="media/logo.png" />
 
-  <link rel="icon" type="image/png" href="media/favicon.png">
+  <link rel="icon" type="image/png" href="media/favicon.png" />
 
-
-  <link rel="stylesheet" href="style/style.css">
-  <link rel="stylesheet" href="style/responsive.css">
-    <link rel="stylesheet" href="style/custom.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Inconsolata:wght@200..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
-
-
- 
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-      <img src="media/logo3.png" style="width: 120px; height: 120px; border-radius: 50%; " alt="ytsolutions">
+<body class="bg-gray-50 text-gray-800">
 
-   <div class="container">
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full bg-white/70 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="media/logo3.png" class="w-14 h-14 rounded-full" />
+        <span class="text-xl font-semibold">YT Solutions</span>
+      </div>
 
-    <h1>Enkle og rimelige nettsider for små bedrifter</h1>
-    <p>&#10004; Mobilvennlig &nbsp; &#10004; Online på 3 dager &nbsp; &#10004; Fast pris – ingen overraskelser</p>
-    <a href="#kontakt" class="btn">Få et uforpliktende tilbud</a>
-   </div>
+      <!-- Hamburger button -->
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1">
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+        <span class="block w-6 h-0.5 bg-gray-800"></span>
+      </button>
+      
+     <!-- Desktop & mobile nav -->
+<nav id="mobile-menu" 
+     class="hidden bg-white/70 md:flex flex-col md:flex-row gap-4 md:gap-8 text-gray-700 absolute md:static top-20 left-0 w-full md:w-auto p-6 md:p-0 shadow md:shadow-none items-center text-center">
+          <a href="#tjenester" class="px-3 py-2 rounded hover:bg-[#333] hover:text-[#00d1b2] transition-colors duration-200">Tjenester</a>
+          <a href="#referanser" class="px-3 py-2 rounded hover:bg-[#333] hover:text-[#00d1b2] transition-colors duration-200">Referanser</a>
+          <a href="#pakker" class="px-3 py-2 rounded hover:bg-[#333] hover:text-[#00d1b2] transition-colors duration-200">Priser</a>
+          <a href="#kontakt" class="px-3 py-2 rounded hover:bg-[#333] hover:text-[#00d1b2] transition-colors duration-200">Kontakt</a>
+      </nav>
+    </div>
+  
   </header>
 
-  <div class="container">
-    <section class="my-2">
-      <h2>Dette tilbyr jeg</h2>
-      <p>Jeg hjelper små bedrifter eller private personer med å komme på nett – raskt og enkelt.</p>
-      <p>Jeg lager pene og brukervennlige nettsider med HTML, CSS og JavaScript.<br>
-      Perfekt for restauranter, frisører, håndverkere og andre som ønsker å bli synlige på Google – uten stress og høye kostnader.</p>
+  <!-- HERO SECTION -->
+  <section class="pt-40 pb-24 text-center bg-gradient-to-br from-blue-50 to-white">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Enkle og rimelige nettsider for små bedrifter</h1>
+    <p class="text-lg text-gray-600">✔ Mobilvennlig &nbsp; ✔ Online på 3 dager &nbsp; ✔ Fast pris – ingen overraskelser</p>
+    <a href="#kontakt" class="mt-6 inline-block bg-[#333] text-[#00d1b2] px-8 py-3 rounded-xl shadow hover:bg-[#00d1b2] hover:text-[#333]">Få et uforpliktende tilbud</a>
+  </section>
 
-      <div class="flex-container wrap my-2">
+  <!-- DETTE TILBYR JEG -->
+  <section id="tjenester" class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-4">Dette tilbyr jeg</h2>
+    <p class="text-gray-700 mb-6">Jeg hjelper små bedrifter og private med å komme på nett – raskt og enkelt.</p>
+    
+    <div class="grid md:grid-cols-4 gap-6 mt-8">
+      <img src="media/mobilvennlig.png" class="rounded-xl shadow" />
+      <img src="media/egetdesign.png" class="rounded-xl shadow" />
+      <img src="media/kartogskjema.png" class="rounded-xl shadow" />
+      <img src="media/published.png" class="rounded-xl shadow" />
+    </div>
+  </section>
 
-          <img src="media/mobilvennlig.png" class="features" alt="Mobilvennlig nettside for små bedrifter">
-          <img src="media/egetdesign.png" class="features" alt="Unik nettside med eget design og innhold tilpasset din bedrift">
-          <img src="media/kartogskjema.png" class="features" alt="Nettside med innebygd Google-kart og brukervennlig kontaktskjema">
-          <img src="media/published.png" class="features" alt="Rask levering – nettsiden ferdig publisert innen 3 til 5 dager">
-       
-        
-      </div>
-     <!--
-       <ul>
-        <li>Mobilvennlig og rask nettside</li>
-        <li>Eget design med ditt innhold</li>
-        <li>Google-kart og kontaktskjema</li>
-        <li>Ferdig publisert innen 3–5 dager</li>
+  <!-- HVORFOR VELGE MEG -->
+  <section class="bg-white py-16 border-t border-gray-200">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6">Hvorfor velge meg?</h2>
+      <ul class="space-y-2 text-gray-700">
+        <li>✔ Jeg gjør det enkelt – ingen teknisk prat</li>
+        <li>✔ Fast, lav pris</li>
+        <li>✔ Lokal og tilgjengelig</li>
+        <li>✔ Skreddersydd for små bedrifter</li>
       </ul>
-     -->
-    </section>
 
-    <section class="my-2">
-      <h2>Hvorfor velge meg?</h2>
-      <ul>
-        <li>&#10004; Jeg gjør det enkelt – ingen teknisk prat</li>
-        <li>&#10004; Jeg har fast, lav pris</li>
-        <li>&#10004; Jeg er lokal og tilgjengelig</li>
-        <li>&#10004; Jeg fokuserer på små bedrifter – ikke store løsninger du ikke trenger</li>
-      </ul>
-      <p class="text-box"><strong>Om meg:</strong><br>
-      Jeg er en utvikler basert i Arendal som brenner for å hjelpe lokale virksomheter og privatpersoner med å bli synlige på nett. Enten du driver en liten bedrift, et enkeltpersonforetak, eller er en privatperson som ønsker en profesjonell tilstedeværelse på nettet, kan jeg hjelpe deg med å komme i gang – enkelt, trygt og uten teknisk stress.
+      <div class="mt-6 bg-blue-50 p-6 rounded-xl border border-blue-100">
+        <p class="text-gray-800 leading-relaxed">
+          <strong>Om meg:</strong><br>
+Jeg er en utvikler basert i Arendal som brenner for å hjelpe lokale virksomheter og privatpersoner med å bli synlige på nett. Enten du driver en liten bedrift, et enkeltpersonforetak, eller er en privatperson som ønsker en profesjonell tilstedeværelse på nettet, kan jeg hjelpe deg med å komme i gang – enkelt, trygt og uten teknisk stress.
 
 Jeg har særlig fokus på små aktører som ofte blir oversett av store byråer – alt fra frisører, håndverkere og kaféer til influensere, innholdsskapere og kunstnere som trenger en personlig nettside eller portefølje.
 
-Du trenger ikke å ha erfaring med nettsider fra før. Jeg veileder deg gjennom hele prosessen og sørger for at du får en løsning som passer dine behov og ditt budsjett – enten det gjelder en enkel informasjonsside, en blogg, eller en mer visuell portefølje som fremhever deg eller din virksomhet.</p>
-    </section>
+Du trenger ikke å ha erfaring med nettsider fra før. Jeg veileder deg gjennom hele prosessen og sørger for at du får en løsning som passer dine behov og ditt budsjett – enten det gjelder en enkel informasjonsside, en blogg, eller en mer visuell portefølje som fremhever deg eller din virksomhet.        </p>
+      </div>
+    </div>
+  </section>
 
-    <section class="my-2">
-      <h2>Referanser</h2>
-      <div class="ref-container">
-          <a href="https://misspizza.no/" class="ref"  target="_blank">
-            <img src="media/misspizza.png"   alt="Miss pizza">
-            <div class="ref-text">
-                <p>Responsivt design i praksis – Miss Pizza sin nettside tilpasser seg alle skjermstørrelser for en sømløs brukeropplevelse.</p>
+  <!-- REFERANSER -->
+  <section id="referanser" class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-8">Referanser</h2>
+    <div class="flex">
+        <a href="https://misspizza.no/" target="_blank" class="block bg-white rounded-xl shadow p-4 hover:shadow-lg transition">
+      <img src="media/misspizza.png" class="rounded-lg mb-3" />
+      <p class="text-gray-600">Responsivt design i praksis – Miss Pizza sin nettside tilpasser seg alle skjermstørrelser.</p>
+    </a>
 
-            </div>
-          </a>
-        
+    
+    </div>
+  
+  </section>
 
+  <!-- PAKKER -->
+  <section id="pakker" class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-center">Nettsidepakker</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow rounded-2xl p-6 transform transition-transform duration-300 hover:scale-110">
+          <h3 class="text-2xl font-semibold mb-2">Mini pakke</h3>
+          <p class="text-gray-700 mb-4 font-semibold">1 side</p>
+          <p class="text-gray-600 mb-4">Perfekt for åpningstider, kontaktinfo og kart.</p>
+          <p class="text-gray-600 mb-4">Gi virksomheten din en digital tilstedeværelse med en enkel og effektiv nettside som tydelig formidler hvem du er, og gjør det lett for kundene å komme i kontakt med deg.</p>
+          <p class="text-xl font-bold text-[#00d1b2]">Fra kr 1 500</p>
+        </div>
+       <div class="bg-white shadow rounded-2xl p-6 transform transition-transform duration-300 hover:scale-110">
+        <h3 class="text-2xl font-semibold mb-2">Standard pakke</h3>
+        <p class="text-gray-700 mb-4 font-semibold">3–5 sider</p>
+        <p class="text-gray-700 mb-4">Alt fra Mini pakke, tjenester, kontakt, galleri m.m</p>
+        <p class="text-gray-600 mb-4">Bygg tillit og synlighet med en profesjonell nettside som samler all viktig informasjon om deg og det du tilbyr – på ett sted.</p>
+        <p class="text-xl font-bold text-[#00d1b2]">Fra kr 3 500</p>
       </div>
 
-    </section>
-
-    <section>
-      <h2>Nettsidepakker</h2>
-      <div class="flex-container my-2">
-        <div class="card">
-          <h2>Mini pakke</h2>
-          <p>1 side</p>
-          <p>Gi virksomheten din en digital tilstedeværelse med en enkel og effektiv nettside som tydelig formidler hvem du er, og gjør det lett for kundene å komme i kontakt med deg.</p>
-
-          <p>For deg som bare trenger åpningstider, kontaktinfo og kart</p>
-          <p class="pris"><strong>Fra kr 1 500</strong></p>
+        <div class="bg-white shadow rounded-2xl p-6 transform transition-transform duration-300 hover:scale-110">
+          <h3 class="text-2xl font-semibold mb-2">Skreddersydd</h3>
+          <p class="text-gray-600 mb-4">Få en løsning tilpasset dine behov.</p>
         </div>
-        <div class="card">
-            <h2>Standard pakke</h2>
-          <p>3–5 sider</p>
-          <p>Bygg tillit og synlighet med en profesjonell nettside som samler all viktig informasjon om deg og det du tilbyr – på ett sted.</p>
-          <p>Alt fra Mini pakke, tjenester, kontakt, galleri m.m</p>
-          <p class="pris"><strong>Fra kr 3 500</strong></p>
-        </div>
-        <div class="card">
-          <h2>
-            Skreddersydd?
-          </h2>
-          <p>
-            Ta kontakt – jeg gir deg raskt et forslag.
-          </p>
-
-        </div>
-
       </div>
-     
-    </section>
+    </div>
+  </section>
 
-    <section id="kontakt">
-      <div class="flex-container my-2">
-        <div >
-          <h2>Kontakt meg</h2>
-          <p>Vil du ha en enkel nettside tilpasset deg eller din bedrift?</p>
-         <p> Send meg en e-post: <a href="mailto:yassertameem84@gmail.com">yassertameem84@gmail.com</a> ,<br> så tar jeg kontakt – helt uforpliktende!</p>
-
-        </div>
-
-        <img src="media/unnamed.png" style="width: 200px; height: 200px; border-radius: 50%; align-self: center;">
-
+  <!-- KONTAKT -->
+  <section id="kontakt" class="max-w-5xl mx-auto px-6 py-16">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-3xl font-bold mb-4">Kontakt meg</h2>
+        <p class="text-gray-700 mb-4">Vil du ha en enkel og profesjonell nettside?</p>
+        <p class="text-gray-700 mb-6">Send meg en e‑post: <a href="mailto:yassertameem84@gmail.com" class="text-[#00d1b2] underline">yassertameem84@gmail.com</a></p>
       </div>
-    <!--
-        <form>
-        <input type="text" placeholder="Navn" required>
-        <input type="email" placeholder="E-postadresse" required>
-        <textarea placeholder="Melding" rows="5" required></textarea>
-        <button type="submit">Send melding</button>
-      </form>
-      <p>eller send meg e-post på: <a href="mailto:kontakt@dittfirmanavn.no">kontakt@dittfirmanavn.no</a></p>
-      -->
-    </section>
-  </div>
+      <img src="media/unnamed.png" class="w-40 h-40 rounded-full mx-auto" />
+    </div>
+  </section>
 
-  <footer>
-
-     <p>© 2025 Yaser Solutions – Webutvikling<br>
-     Basert i Arendal<br>
-    <a href="personvern.html">Personvern & cookies</a></p>
-
-
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-gray-500 text-sm bg-white border-t">
+    © 2025 Yaser Hani Timim Solutions – Webutvikling<br />
+    Basert i Arendal<br />
+    <a href="personvern.html" class="text-[#00d1b2] underline">Personvern & cookies</a>
   </footer>
-  <script src="script/script.js"></script>
+<!-- JS for hamburger menu -->
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+
+menuBtn.addEventListener('click', () => {
+mobileMenu.classList.toggle('hidden');
+});
+</script>
+
 </body>
 </html>
